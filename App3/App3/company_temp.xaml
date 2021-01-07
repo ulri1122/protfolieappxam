@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.company_temp">
+    <ContentPage.Content>
+
+        <StackLayout x:Name="Compview">
+
+            <Label FontSize="Large"  VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Text="{Binding CompName}" />
+            <Image Source="{Binding Img}"/>
+
+            
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="{Binding Stop, StringFormat=' Tidsperiode : {0}   -'}" />
+                        <Span Text="{Binding Start,StringFormat='   {0}'}" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Text="{Binding CompDesc}" />
+
+            <Button x:Name="link" CommandParameter="{Binding CompLink}" Text="website"></Button>
+           
+
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

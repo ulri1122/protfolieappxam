@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.about_me"
+             Title="Om Mig"
+             BackgroundColor="Gray">
+    <StackLayout>
+
+        <Frame Grid.Row="0"
+           Grid.Column="1"
+           Grid.ColumnSpan="2"
+           Padding="0"
+           HorizontalOptions="CenterAndExpand"
+           VerticalOptions="Center"
+           CornerRadius="250"
+           IsClippedToBounds="True"
+           HeightRequest="250"
+           WidthRequest="250"
+           BackgroundColor="Gray">
+            <Image Source="https://images.freeimages.com/images/large-previews/7e8/man-avatar-1632965.jpg"
+               VerticalOptions="FillAndExpand"
+               HorizontalOptions="FillAndExpand" />
+        </Frame>
+            <Label HorizontalTextAlignment="center" VerticalTextAlignment="Center" FontSize="18" TextColor="White" Text="Ulrik Magnusson"/>
+        <Frame CornerRadius="25"  
+                OutlineColor="White">
+            <Label Text="orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a gall"/>
+            
+        </Frame>
+        <Frame CornerRadius="25"  
+                OutlineColor="White" 
+                Padding="0">
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="20"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width = "*" />
+                    <ColumnDefinition Width = "*" />
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" Grid.Column="0">
+                    <Image HeightRequest="18" WidthRequest="18" Source="https://img.icons8.com/ios-filled/344/phone.png"/>
+                    <Label Text=": 50406616" HorizontalOptions="Center" VerticalOptions="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="PlacePhoneCall"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" Grid.Column="1">
+                    <Image HeightRequest="18" WidthRequest="18" Source="https://img.icons8.com/material-sharp/344/important-mail.png"/>
+                    <Label Text=": mail@mail.com" HorizontalOptions="Center" VerticalOptions="Center" >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="openMail"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="2" Grid.Column="0">
+                    <Image HeightRequest="18" WidthRequest="18" Source="https://img.icons8.com/ios-filled/2x/find-clinic.png"/>
+                    <Label Text=": adresse 23 Denmark" HorizontalOptions="Center" VerticalOptions="Center" >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="openAddress"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="2" Grid.Column="1">
+                    <Image HeightRequest="18" WidthRequest="18" Source="https://img.icons8.com/fluent/344/github.png"/>
+                    <Label Text=": github" HorizontalOptions="Center" VerticalOptions="Center" >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="openGitHub"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+
+                </StackLayout>
+            </Grid>
+        </Frame>
+    </StackLayout>
+</ContentPage>
